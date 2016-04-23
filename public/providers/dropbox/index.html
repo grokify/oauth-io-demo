@@ -11,7 +11,8 @@
         <h1>OAuth.io Demo - Dropbox</h1>
 
 <script>
-OAuth.initialize(appConfig['OAuthIOAppPublicKey']);
+OAuth.initialize(appConfig['app_key']);
+OAuth.setOAuthdURL(appConfig['oauthd_url']);
 
 OAuth.popup('dropbox')
     .done(function(dropbox) {
