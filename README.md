@@ -18,6 +18,13 @@ $ cp config-sample.js config.js
 $ vi config.js
 ```
 
+The `config.js` file has the following properties:
+
+| Property | Description |
+|----------|-------------|
+| `app_key` | Your OAuth.io app public key |
+| `oauthd_url` | Your `oauthd` server URL |
+
 ## Usage
 
 Run the public directory as static HTML. The following example uses `http-server`.
