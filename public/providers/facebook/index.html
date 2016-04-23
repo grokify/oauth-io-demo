@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OAuth.io Demo - Facebook</title>
+        <meta charset="UTF-8">
+        <script src="/config.js"></script>
+        <script src="/components/oauth-js/dist/oauth.min.js"></script>
+    </head>
+    <body>
+
+        <h1>OAuth.io Demo - Facebook</h1>
+
+<script>
+OAuth.initialize(appConfig['OAuthIOAppPublicKey']);
+
+OAuth.popup('facebook')
+.done(function(facebook) {
+    console.log('Your access_token is ' + facebook.access_token)
+    facebook.me().done(function(me) {
+        console.log('Your name is ' + me.name)
+        console.log('Your id is ' + me.id)
+    })
+}).fail(function (err) {
+    console.log(err);
+})
+</script>
+
+        <h2>Usage</h2>
+
+        <ol>
+            <li>Open web console</li>
+            <li>Load page and view name</li>
+        </ol>
+
+    </body>
+</html>
